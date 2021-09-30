@@ -1,8 +1,13 @@
 ---
+title: Docker
+subtitle:
+tags: [use speculos, emulate, emulator, Nano X emulator]
+category: Speculos
+author:
+toc: true
+layout: doc_sp
 sort: 2
 ---
-
-# Docker
 
 ## How to use the Docker image
 

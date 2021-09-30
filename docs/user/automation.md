@@ -1,8 +1,13 @@
 ---
+title: Automation: press buttons automatically
+subtitle:
+tags: [use speculos, emulate, emulator, Nano X emulator]
+category: Speculos
+author:
+toc: true
+layout: doc_sp
 sort: 6
 ---
-
-# Automation: press buttons automatically
 
 The `--automation` argument allows to apply a set of actions (eg. button press)
 when a condition is met (usually some text is displayed on the screen). It is

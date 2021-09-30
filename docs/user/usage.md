@@ -1,8 +1,13 @@
 ---
+title: Usage
+subtitle:
+tags: [use speculos, emulate, emulator, Nano X emulator]
+category: Speculos
+author:
+toc: true
+layout: doc_sp
 sort: 1
 ---
-
-# Usage
 
 After having [installed the requirements and built](../installation/build.md) speculos:
 

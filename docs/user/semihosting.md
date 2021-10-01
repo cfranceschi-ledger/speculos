@@ -9,6 +9,11 @@ layout: doc_sp
 sort: 7
 ---
 
+#### Sections in this article
+{:.no_toc}
+* TOC
+{:toc}
+
 QEMU implements some semihosted operations which can be triggered from the app.
 For instance, messages can be printed to stderr with the following code:
 

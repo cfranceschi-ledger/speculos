@@ -13,11 +13,6 @@ sort: 2
 * TOC
 {:toc}
 
-#### Sections in this article
-{:.no_toc}
-* TOC
-{:toc}
-
 Building in WSL 2 (Windows Subsystem for Linux 2) is identical to the procedure in [building](../build).
 
 Using Speculos with display features requires correctly exporting the X display.

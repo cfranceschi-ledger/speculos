@@ -1,5 +1,5 @@
 ---
-title: Clients: how to send APDUs
+title: "Clients: how to send APDUs"
 subtitle:
 tags: [use speculos, emulate, emulator, Nano X emulator]
 category: Speculos

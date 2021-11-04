@@ -1,5 +1,5 @@
 ---
-title: Debug: how to use GDB
+title: "Debug: how to use GDB"
 subtitle:
 tags: [use speculos, emulate, emulator, Nano X emulator]
 category: Speculos

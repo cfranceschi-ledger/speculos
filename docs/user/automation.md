@@ -1,5 +1,5 @@
 ---
-title: Automation: press buttons automatically
+title: "Automation: press buttons automatically"
 subtitle:
 tags: [use speculos, emulate, emulator, Nano X emulator]
 category: Speculos

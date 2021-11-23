@@ -28,6 +28,8 @@
 #define CX_ADDR_NANOX ((void *)0x00210000)
 #define CX_SIZE       0x8000
 #define CX_OFFSET     0x10000
+#define CXRAM_ADDR    ((void *)0x00603000)
+#define CXRAM_SIZE    0x800
 
 typedef enum { MODEL_NANO_S, MODEL_NANO_X, MODEL_BLUE, MODEL_COUNT } hw_model_t;
 
@@ -256,9 +258,22 @@ static void *load_app(char *name)
       warn("mmap data");
       goto error;
     }
-    /* initialize .bss (and the stack) to 0xa5 to mimic BOLOS behavior, even if
-     * it violates section 3.5.7 of the C89 standard */
-    memset(data_addr, 0xa5, data_size);
+    /* initialize .bss (and the stack) to 0xa5 to mimic BOLOS behavior in older
+     * FW versions, even if it violates section 3.5.7 of the C89 standard */
+    switch (sdk_version) {
+    case SDK_BLUE_1_5:
+    case SDK_BLUE_2_2_5:
+    case SDK_NANO_S_1_5:
+    case SDK_NANO_S_1_6:
+    case SDK_NANO_S_2_0:
+    case SDK_NANO_X_1_2:
+      memset(data_addr, 0xa5, data_size);
+      break;
+    /* In newer FW versions the app RAM (.bss and stack) is zeroized.
+     * This is done by mmap thanks to the MAP_ANONYMOUS flag. */
+    default:
+      break;
+    }
   }
 
   /* setup extra page as additional RAM available to the app */
@@ -314,10 +329,10 @@ error:
 
 static int load_cxlib(hw_model_t model, char *cxlib_path)
 {
-  // First, try to open the cx.elf file specified (could be the one by default):
+  // First, try to open the cx.elf file specified (could be the one by default)
   int fd = open(cxlib_path, O_RDONLY);
   if (fd == -1) {
-    // Try to use environment variable CXLIB_PATH:
+    // Try to use environment variable CXLIB_PATH
     char *path = getenv("CXLIB_PATH");
     if (path == NULL) {
       warnx("failed to open \"%s\" and no CXLIB_PATH environment found!",
@@ -344,6 +359,15 @@ static int load_cxlib(hw_model_t model, char *cxlib_path)
     warn("mmap cxlib");
     close(fd);
     return -1;
+  }
+
+  // Map CXRAM on Nano X devices
+  if (model == MODEL_NANO_X) {
+    if (mmap(CXRAM_ADDR, CXRAM_SIZE, PROT_READ | PROT_WRITE,
+             MAP_PRIVATE | MAP_FIXED | MAP_ANONYMOUS, -1, 0) == MAP_FAILED) {
+      warn("mmap cxram");
+      return -1;
+    }
   }
 
   if (patch_svc(cx_addr, CX_SIZE) != 0) {

@@ -9,11 +9,6 @@ layout: doc
 sort: 2
 ---
 
-#### Sections in this article
-{:.no_toc}
-* TOC
-{:toc}
-
 ## How to use the Docker image
 
 A docker image is available on [GitHub Packages](https://ghcr.io/ledgerhq/speculos). Pull the latest image:

@@ -1,16 +1,26 @@
 ---
+title: Usage
+subtitle:
+tags: [use speculos, emulate, emulator, Nano X emulator]
+category: Speculos
+author:
+toc: true
+layout: doc
 sort: 1
 ---
 
-# Usage
+#### Sections in this article
+{:.no_toc}
+* TOC
+{:toc}
 
-After having [installed the requirements and built](../installation/build.md) speculos:
+After having [installed the requirements and built](../../installation/build) speculos:
 
 ```shell
 ./speculos.py apps/btc.elf
 ```
 
-The docker image can also be used directly, as detailed in the specific [docker documentation page](docker.md).
+The docker image can also be used directly, as detailed in the specific [docker documentation page](../docker).
 
 The Nano S is the default model; the Nano X and Blue can be specified on the
 command-line:

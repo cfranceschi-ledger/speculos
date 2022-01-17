@@ -1,10 +1,19 @@
 ---
+title: Windows (with WSL 2)
+subtitle:
+tags: [install speculos, emulate, emulator, Nano X emulator, speculos]
+category: Speculos
+author:
+layout: doc
 sort: 2
 ---
 
-# Windows (with WSL 2)
+#### Sections in this article
+{:.no_toc}
+* TOC
+{:toc}
 
-Building in WSL 2 (Windows Subsystem for Linux 2) is identical to the procedure in [building](build.md).
+Building in WSL 2 (Windows Subsystem for Linux 2) is identical to the procedure in [building](../build).
 
 Using Speculos with display features requires correctly exporting the X display.
 

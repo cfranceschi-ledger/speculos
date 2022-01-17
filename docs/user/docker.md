@@ -1,8 +1,18 @@
 ---
+title: Docker
+subtitle:
+tags: [use speculos, emulate, emulator, Nano X emulator]
+category: Speculos
+author:
+toc: true
+layout: doc
 sort: 2
 ---
 
-# Docker
+#### Sections in this article
+{:.no_toc}
+* TOC
+{:toc}
 
 ## How to use the Docker image
 
@@ -53,7 +63,7 @@ Edit `docker-compose.yml` to configure port forwarding and environment variables
 ## Build
 
 The following command-line can be used to create a docker image based on a local
-[build](../installation/build.md):
+[build](../../installation/build):
 
 ```shell
 docker build ./ -t speculos

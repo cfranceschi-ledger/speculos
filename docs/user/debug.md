@@ -1,8 +1,17 @@
 ---
+title: "Debug: how to use GDB"
+subtitle:
+tags: [use speculos, emulate, emulator, Nano X emulator]
+category: Speculos
+author:
+layout: doc
 sort: 4
 ---
 
-# Debug: how to use GDB
+#### Sections in this article
+{:.no_toc}
+* TOC
+{:toc}
 
 Debug an app thanks to GDB:
 
@@ -14,4 +23,4 @@ Debug an app thanks to GDB:
 Some useful tricks:
 
 - Use the `-t` (`--trace`) argument to trace every syscalls.
-- [Semihosting](semihosting.md) features can be used as an additional debug mechanism.
+- [Semihosting](../semihosting) features can be used as an additional debug mechanism.

@@ -1,8 +1,18 @@
 ---
+title: Linux
+subtitle:
+tags: [install speculos, emulate, emulator, Nano X emulator, speculos]
+category: Speculos
+author:
+toc: true
+layout: doc
 sort: 1
 ---
 
-# Linux
+#### Sections in this article
+{:.no_toc}
+* TOC
+{:toc}
 
 ## Requirements
 

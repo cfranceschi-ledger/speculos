@@ -2,12 +2,25 @@
 # speculos from the command-line (--display headless or --display console, no
 # GUI).
 #
-# Prerequisite: a working speculos build.
 
+# Building the Speculos environment
+FROM ghcr.io/ledgerhq/speculos-builder:latest AS builder
+
+ADD . /speculos
+WORKDIR /speculos/
+
+RUN cmake -Bbuild -H. -DPRECOMPILED_DEPENDENCIES_DIR=/install -DWITH_VNC=1
+RUN make -C build
+
+
+# Preparing final image
 FROM docker.io/library/python:3.9-slim
 
 ADD . /speculos
 WORKDIR /speculos
+
+# Copying artifacts from previous build
+COPY --from=builder /speculos/speculos/resources/ /speculos/speculos/resources/
 
 RUN pip install --upgrade pip pipenv
 RUN pipenv install --deploy --system
@@ -15,6 +28,7 @@ RUN pipenv install --deploy --system
 RUN apt-get update && apt-get install -qy \
     qemu-user-static \
     libvncserver-dev \
+    gdb-multiarch \
     && apt-get clean
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/

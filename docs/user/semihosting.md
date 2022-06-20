@@ -6,7 +6,7 @@ category: Speculos
 author:
 toc: true
 layout: doc
-sort: 7
+sort: 8
 ---
 
 QEMU implements some semihosted operations which can be triggered from the app.

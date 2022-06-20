@@ -6,7 +6,7 @@ category: Speculos
 author:
 toc: true
 layout: doc
-sort: 5
+sort: 6
 ---
 
 A REST API is available at http://127.0.0.1:5000 (the port can be changed thanks to `--api-port`) when speculos is running. The specification of the API can be found at this URL, or from the swagger.io [demo website](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/LedgerHQ/speculos/master/speculos/api/static/swagger/swagger.json).

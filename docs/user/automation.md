@@ -6,7 +6,7 @@ category: Speculos
 author:
 toc: true
 layout: doc
-sort: 6
+sort: 7
 ---
 
 The `--automation` argument allows to apply a set of actions (eg. button press)

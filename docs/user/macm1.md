@@ -1,4 +1,13 @@
-# Docker
+---
+title: Docker with an M1 chip
+subtitle:
+tags: [use speculos, emulate, emulator, Nano X emulator]
+category: Speculos
+author:
+toc: true
+layout: doc
+sort: 3
+---
 
 ## How to build the Docker image
 

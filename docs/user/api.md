@@ -1,8 +1,13 @@
 ---
-sort: 5
+title: REST API
+subtitle:
+tags: [use speculos, emulate, emulator, Nano X emulator]
+category: Speculos
+author:
+toc: true
+layout: doc
+sort: 6
 ---
-
-# REST API
 
 A REST API is available at [http://127.0.0.1:5000](http://127.0.0.1:5000) (the port can be changed thanks to `--api-port`) when speculos is running. The specification of the API can be found at this URL, or from the swagger.io [demo website](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/LedgerHQ/speculos/master/speculos/api/static/swagger/swagger.json).
 

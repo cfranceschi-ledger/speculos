@@ -1,8 +1,12 @@
 ---
+title: "Debug: how to use GDB"
+subtitle:
+tags: [use speculos, emulate, emulator, Nano X emulator]
+category: Speculos
+author:
+layout: doc
 sort: 4
 ---
-
-# Debug: how to use GDB
 
 Debug an app thanks to GDB:
 

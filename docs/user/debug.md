@@ -18,4 +18,4 @@ Debug an app thanks to GDB:
 Some useful tricks:
 
 - Use the `-t` (`--trace`) argument to trace every syscalls.
-- [Semihosting](semihosting.md) features can be used as an additional debug mechanism.
+- [Semihosting](../semihosting) features can be used as an additional debug mechanism.
